@@ -1,0 +1,47 @@
+def prime_num(num):
+    if num > 1:  
+        for i in range(2,num):  
+            if (num % i) == 0:  
+              pass
+              break  
+        else:  
+          print(num,"is a prime number")  
+         
+    else:  
+     print(num,"is not a prime number")  
+     
+
+def is_odd_even(num):
+    if num % 2 == 0:
+        print(num, "is even number")
+    else:
+        print(num, "is odd number")
+
+def isPalindrome(num):
+    n = str(num)
+    l = len(n) 
+    for i in range(l // 2):
+        if n[i] != n[l - 1 - i]:
+            pass
+        else:
+            print(num," is a palindrome number")    
+              
+            
+def isArmstrong(num):
+    sum= 0
+    temp = num
+    while temp > 0:
+        digit = temp % 10
+        sum += digit ** 3
+        temp //= 10
+    if num== sum:
+        print(num , "is armstrong num")  
+
+def check():
+    number = int(input("Please! Enter a number: "))
+    prime_num(number)
+    is_odd_even(number)
+    isPalindrome(number)
+    isArmstrong(number)
+
+check()
